@@ -1,0 +1,58 @@
+1. деконтаминация bbduk.sh
+
+1) избавляемся от человеческой и бактериальной контаминации
+% ./bbduk.sh in=../read1.fastqsanger.fastq in2=../read2.fastqsanger.fastq ref=../hg19_main_mask_ribo_animal_allplant_allfungus.fa.gz,../fusedEPmasked2.fa.gz out=../tepm_finally/humbact_clean1.fq out2=../tepm_finally/humbact_clean2.fq outm=../tepm_finally/matched.fq k=31 -Xmx150g
+
+RESULTS:
+Added 2610338195 kmers; time:   369.758 seconds.                      
+Memory: max=205800m, free=79874m, used=125926m                        
+                                                              
+Input is being processed as paired
+Started output streams: 0.013 seconds.                                
+Processing time:                82.841 seconds.                       
+Input:                          100424418 reads                 15063662700 bases.
+Contaminants:                   885796 reads (0.88%)    132869400 bases (0.88%)
+Total Removed:                  885796 reads (0.88%)    132869400 bases (0.88%)
+
+Result:                         99538622 reads (99.12%)         14930793300 bases (99.12%)
+
+2) избавляемся от контаминации хозяина
+% ./bbduk.sh in=../tepm_finally/humbact_clean1.fq in2=../tepm_finally/humbact_clean2.fq ref=../moll_masked.fa out=../tepm_finally/humbactmol_clean1.fq out2=../tepm_finally/humbactmol_clean2.fq outm=../tepm_finally/matched2.fq k=31 -Xmx200g
+
+RESULTS:
+Input is being processed as paired
+Started output streams: 0.011 seconds.                                
+Processing time:                58.196 seconds.                       
+Input:                          99538622 reads          14930793300 bases.
+Contaminants:                   1401654 reads (1.41%)   210248100 bases (1.41%)
+Total Removed:                  1401654 reads (1.41%)   210248100 bases (1.41%)
+Result:                         98136968 reads (98.59%)         14720545200 bases (98.59%)
+
+2. деконтаминация by bbmap.sh:
+
+1) избавляемся от человеческой контаминации:
+
+% bbmap.sh minid=0.95 maxindel=3 bwr=0.16 bw=12 quickmatch fast minhits=2 build=1 qtrim=rl trimq=10 untrim -Xmx23g in=../read1.fastqsanger.fa stq in2=../read2.fastqsanger.fastq outu=../bbmap_temp_finally/human_clean1.fq outu2=../bbmap_temp_finally/human_clean2.fq outm=../bbmap_temp_finally/human.fq
+
+выкинули из 1 -- 46989, из 2 -- 28408
+
+2) от бактериальной:
+
+% bbmap.sh minid=0.95 maxindel=3 bwr=0.16 bw=12 quickmatch fast minhits=2 build=2 qtrim=rl trimq=10 untrim -Xmx23g in=../bbmap_temp_finally/human_clean1.fq in2=../bbmap_temp_finally/human_clean2.fq outu=../bbmap_temp_finally/humanbact_clean1.fq outu2=../bbmap_temp_finally/humanbact_clean2.fq outm=../bbmap_temp_finally/human.fq
+
+1 -- 3854, 2 -- 3749
+
+3)от моллюска:
+
+% bbmap.sh minid=0.95 maxindel=3 bwr=0.16 bw=12 quickmatch fast minhits=2 build=3 qtrim=rl trimq=10 untrim -Xmx23g in=../bbmap_temp_finally/humanbact_clean1.fq in2=../bbmap_temp_finally/humanbact_clean2.fq outu=../bbmap_temp_finally/humanbactmoll_clean1.fq outu2=../bbmap_temp_finally/humanbactmoll_clean2.fq outm=../bbmap_temp_finally/human.fq
+
+1 -- 68200, 2 -- 65682
+
+3. чистим от адаптеров и непарных ридов:
+% java -jar trimmomatic-0.36.jar PE ../tepm_finally/humbactmol_clean1.fq ../tepm_finally/humbactmol_clean2.fq ../tepm_finally/humbactmol_clean1-P.fq ../tepm_finally/humbactmol_clean1-U.fq ../tepm_finally/humbactmol_clean2-P.fq ../tepm_finally/humbactmol_clean2-U.fq ILLUMINACLIP:adapters/TruSeq3-PE.fa:2:30:10
+ 
+OUTPUT:
+Input Read Pairs: 49068484 Both Surviving: 46714028 (95.20%) Forward Only Surviving: 2354456 (4.80%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%) 
+
+
+
