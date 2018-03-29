@@ -33,7 +33,6 @@ final quantity: 89184918 reads
 
 **Short summary report**
 
-Metrics/transcripts                                    transcripts              
 
  == BASIC TRANSCRIPTS METRICS == 
 
