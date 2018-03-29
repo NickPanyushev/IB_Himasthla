@@ -1,4 +1,4 @@
-1) removing human, bacteria and host decontamination using BBDuk:
+1) removing human, bacteria and host contamination using BBDuk:
 
 % bbduk.sh in=read1.fastqsanger.fastq in2=read2.fastqsanger.fastq ref=hg19_main_mask_ribo_animal_allplant_allfungus.fa.gz,fusedEPmasked2.fa.gz,moll_masked.fa out=clean1.fq out2=clean2.fq outm=matched.fq k=31 -Xmx150g
 
