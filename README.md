@@ -36,18 +36,19 @@ final quantity: 89184918 reads
 Metrics/transcripts                                    transcripts              
 
  == BASIC TRANSCRIPTS METRICS == 
-Transcripts                                            122671                   
 
-Transcripts > 500 bp                                   25381                    
+Transcripts --                                            122671                   
 
-Transcripts > 1000 bp                                  13952
+Transcripts > 500 bp --                                   25381                    
+
+Transcripts > 1000 bp --                                 13952
 
  == BUSCO METRICS == 
 
-Complete                                               80.982                   
+Complete --                                               80.982                   
 
-Partial                                                8.793
+Partial --                                            8.793
 
  == GeneMarkS-T METRICS == 
 
-Predicted genes                                        19470
+Predicted genes --                                        19470
