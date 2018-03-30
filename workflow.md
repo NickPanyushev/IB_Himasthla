@@ -3,7 +3,7 @@
 
 `% bbduk.sh in=read1.fastqsanger.fastq in2=read2.fastqsanger.fastq ref=hg19_main_mask_ribo_animal_allplant_allfungus.fa.gz,fusedEPmasked2.fa.gz,moll_masked.fa out=clean1.fq out2=clean2.fq outm=matched.fq k=31 -Xmx150g`
 
-
+Input:                          100424418 reads
 Total Removed:                  2287450 reads    
 Result:                         98136968 reads         
 
@@ -12,9 +12,9 @@ Result:                         98136968 reads
 
 `% bbduk.sh -Xmx100g in=clean1.fq in2=clean2.fq ref=tepm_finally/SILVA_132_SSURef_tax_silva.fasta,tepm_finally/SILVA_132_LSURef_tax_silva.fasta out=finally_cleaned1.fq out2=finally_cleaned2.fq outm=matched.fq k=31 -Xmx150g`
 
-| Input  | 98136968 reads       |
-|Removed | 2903390 reads (2.96%)|
-|Result  | 95233578 reads       |
+Input: 98136968 reads       
+Removed: 2903390 reads (2.96%)
+Result: 95233578 reads
 
 
 
@@ -23,7 +23,7 @@ Result:                         98136968 reads
 
 `% java -jar trimmomatic-0.36.jar PE clean1.fq clean2.fq clean1-P.fq clean1-U.fq clean2-P.fq clean2-U.fq TRAILING:20 LEADING:20 SLIDINGWINDOW:4:20 ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10  MINLEN:30`
  
-final quantity: 89184918 reads
+
 
 
 **4. Assembly using rnaSPAdes:**
