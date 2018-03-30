@@ -13,7 +13,6 @@ Result:                         98136968 reads
 `% bbduk.sh -Xmx100g in=clean1.fq in2=clean2.fq ref=tepm_finally/SILVA_132_SSURef_tax_silva.fasta,tepm_finally/SILVA_132_LSURef_tax_silva.fasta out=finally_cleaned1.fq out2=finally_cleaned2.fq outm=matched.fq k=31 -Xmx150g`
 
 | Input  | 98136968 reads       |
-|--------|:--------------------:|
 |Removed | 2903390 reads (2.96%)|
 |Result  | 95233578 reads       |
 
