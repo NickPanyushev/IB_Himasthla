@@ -1,5 +1,3 @@
-# IB_Himasthla
-This project is about TE search in Himasthla transcriptome
 
 **1. removing human, bacteria and host contamination using BBDuk:**
 
@@ -12,7 +10,14 @@ Result:                         98136968 reads
 
 **2. Decontamination from rRNA using BBmap:**
 
-`% bbmap.sh -Xmx100g ref=SILVA_132_SSURef_tax_silva.fasta,SILVA_132_LSURef_tax_silva.fasta in=clean1.fq in2=clean2.fq outu=finally_cleaned1.fq outu2=finally_cleaned1.fq outm=matched.fq nodisk`
+`% bbduk.sh -Xmx100g in=clean1.fq in2=clean2.fq ref=tepm_finally/SILVA_132_SSURef_tax_silva.fasta,tepm_finally/SILVA_132_LSURef_tax_silva.fasta out=finally_cleaned1.fq out2=finally_cleaned2.fq outm=matched.fq k=31 -Xmx150g`
+
+|Input | 98136968 reads|
+|Removed | 2903390 reads (2.96%)|
+|Result | 95233578 reads|
+
+
+
 
 **3. Adapters and unpaired reads removing:**
 
