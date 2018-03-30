@@ -6,7 +6,7 @@ Repeated DNA makes up a large fraction of a typical mammalian genome, and some r
 Transposons can cause genome variability in trematodes. Therefore, the study of transcription of transposons - the initial stage in the study of these processes
 
 ## Objective:
-Finding transposons in Himasthla elongate genome using different tools and comparative analysis of their results
+Identification TE in Himasthla elongate genome using different tools and comparative analysis of their results
 
 ## Goals:
 
