@@ -3,49 +3,57 @@ file name: transcripts.fasta
 sequences:        122184
 total length:   63762434 bp  (63757521 bp excl N/X-runs)
 GC level:         44.29 %
-bases masked:   11485395 bp ( 18.01 %)
+bases masked:    2524440 bp ( 3.96 %)
 ==================================================
                number of      length   percentage
                elements*    occupied  of sequence
 --------------------------------------------------
-SINEs:                0            0 bp    0.00 %
-      ALUs            0            0 bp    0.00 %
-      MIRs            0            0 bp    0.00 %
+Retroelements        12577      1820150 bp    2.85 %
+   SINEs:              913        54447 bp    0.09 %
+   Penelope            164        14136 bp    0.02 %
+   LINEs:             5868       832933 bp    1.31 %
+    CRE/SLACS           15          923 bp    0.00 %
+     L2/CR1/Rex       1096       138194 bp    0.22 %
+     R1/LOA/Jockey     205        14234 bp    0.02 %
+     R2/R4/NeSL         58         3043 bp    0.00 %
+     RTE/Bov-B        3460       586150 bp    0.92 %
+     L1/CIN4           312        20916 bp    0.03 %
+   LTR elements:      5796       932770 bp    1.46 %
+     BEL/Pao          1013       203035 bp    0.32 %
+     Ty1/Copia         890        56882 bp    0.09 %
+     Gypsy/DIRS1      3379       636013 bp    1.00 %
+       Retroviral      431        30836 bp    0.05 %
 
-LINEs:            16618      2981769 bp    4.68 %
-      LINE1           0            0 bp    0.00 %
-      LINE2         339        59533 bp    0.09 %
-      L3/CR1       4462       993841 bp    1.56 %
+DNA transposons       3512       248640 bp    0.39 %
+   hobo-Activator      649        44935 bp    0.07 %
+   Tc1-IS630-Pogo      602        63146 bp    0.10 %
+   En-Spm                0            0 bp    0.00 %
+   MuDR-IS905            0            0 bp    0.00 %
+   PiggyBac             65         4680 bp    0.01 %
+   Tourist/Harbinger   137        11211 bp    0.02 %
+   Other (Mirage,       59         2930 bp    0.00 %
+    P-element, Transib)
 
-LTR elements:      5248      1461004 bp    2.29 %
-      ERVL            0            0 bp    0.00 %
-      ERVL-MaLRs      0            0 bp    0.00 %
-      ERV_classI      0            0 bp    0.00 %
-      ERV_classII     0            0 bp    0.00 %
+Rolling-circles          0            0 bp    0.00 %
 
-DNA elements:      1180       247325 bp    0.39 %
-     hAT-Charlie      9          345 bp    0.00 %
-     TcMar-Tigger     0            0 bp    0.00 %
+Unclassified:          961        72529 bp    0.11 %
 
-Unclassified:     48215      6417739 bp   10.07 %
-
-Total interspersed repeats: 11107837 bp   17.42 %
+Total interspersed repeats:     2141319 bp    3.36 %
 
 
-Small RNA:            0            0 bp    0.00 %
+Small RNA:             311        22184 bp    0.03 %
 
-Satellites:           1          204 bp    0.00 %
-Simple repeats:    8872       355053 bp    0.56 %
-Low complexity:     984        50033 bp    0.08 %
+Satellites:            127        15203 bp    0.02 %
+Simple repeats:       8237       309802 bp    0.49 %
+Low complexity:       1032        51943 bp    0.08 %
 ==================================================
 
 * most repeats fragmented by insertions or deletions
   have been counted as one element
                                                       
 
-The query species was assumed to be homo          
-RepeatMasker Combined Database: Dfam_Consensus-20170127
-                          
+The query species was assumed to be eukaryota     
+RepeatMasker Combined Database: Dfam_Consensus-20170127, RepBase-20170127
+        
 run with rmblastn version 2.6.0+
-The query was compared to classified sequences in ".../merged_repeat_db.fa.classified"
 
