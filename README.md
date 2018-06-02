@@ -26,12 +26,12 @@ Identification TE in Himasthla elongate genome using different tools and compara
 
 ## Methods
 
-For de novo transposons identification we used RepeatModeller tool which includes RepeatScout, RECON, and Tandem Repeat Finder.
+For de novo transposons identification we used [RepeatModeller tool](http://www.repeatmasker.org/RepeatModeler/) which includes RepeatScout, RECON, and Tandem Repeat Finder.
 
-To classify transposones we used RepeatMasker with databases from [GIRI](https://www.girinst.org/repbase/)
+To classify transposones we used [RepeatMasker](http://www.repeatmasker.org/) with databases from [GIRI](https://www.girinst.org/repbase/)
 
 To de novo identify and classify modile elements in reads we used Repeat Explorer from [Galaxy server](http://repeatexplorer.org/)
 
-In general, using RepeatModeller+Repeatmasker combination we get folowwing results:
+In general, using RepeatModeller+Repeatmasker combination we get following results:
 
-![alt text](Counts.png)
+!(https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Counts.png)
