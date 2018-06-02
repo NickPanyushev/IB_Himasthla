@@ -18,8 +18,8 @@ Identification TE in Himasthla elongate genome using different tools and compara
 
 ## Detailed information:
 
-* To get more information about RepeatModeller output go to "RepeatModeller_output" folder
-* To get more information about RepeaMasker output go to "RepeatModeller_output"
-* To get more information about Repeat Explorer2 output go to "repeat_explorer_output"
+* To get more information about RepeatModeller results go to "RepeatModeller_output" folder
+* To get more information about RepeaMasker results go to "RepeatModeller_output"
+* To get more information about Repeat Explorer2 results go to "repeat_explorer_output"
 * To get more information about quality assessment of transcriptome assembly go to "rnaQ_report"
 * To get file with transcripts abundance in TPM go to "quantification"
