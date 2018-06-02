@@ -14,4 +14,9 @@ Identification TE in Himasthla elongate genome using different tools and compara
 
 2. Transcriptome assembly using rnaSPAdes or Trinity;
 
-3. Identification of transposable elements using different tools(RepeatModeller, RepeatMasker, Repeatexplorer2)
+3. Identification and classification of transposable elements using different tools (RepeatModeller, RepeatMasker, Repeatexplorer2)
+
+## Detailed information:
+
+* To get more information about RepeatModeller output go to "RepeatModeller_output"
+* To get more information about RepeaMasker output go to "RepeatModeller_output"
