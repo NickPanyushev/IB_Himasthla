@@ -36,12 +36,16 @@ In general, using RepeatModeller+Repeatmasker combination we got following resul
 
 ![RepeatModeller+RepeatMasker results](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Counts.png)
 
-According to RepeatMasker results the most abundance transposone families is BovB, CR1 and Gypsy. All this families belong to retrotransposones.
+According to RepeatMasker results the most abundance transposone families are BovB, CR1 and Gypsy. All this families belong to retrotransposones.
 
 Some groups contain overrepresented sequences. For example, the PAO family from the LTR class demonstrates one overrepresented sequence that can play an important role in the Himasthla elongata cells:
 
 ![overrepresented sequences](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Rplot02.jpeg)
 
+
+RepeatExplorer reported about 10 percents of repetitive elements in the H. elongata transcriptome. Only 0,01% fell on Bel-Pao elements, 1.03 - Gypsy and 0.09 - Satellites. 
+
+Thus, RepetExplorer turned out to be a less effective tool in the annotation of mobile elements
 
 
 
