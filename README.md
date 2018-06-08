@@ -35,3 +35,14 @@ To de novo identify and classify modile elements in reads we used Repeat Explore
 In general, using RepeatModeller+Repeatmasker combination we got following results:
 
 ![RepeatModeller+RepeatMasker results](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Counts.png)
+
+According to RepeatMasker results the most abundance transposone families is BovB, CR1 and Gypsy. All this families belong to retrotransposones.
+
+Some groups contain overrepresented sequences. For example, the PAO family from the LTR class demonstrates one overrepresented sequence that can play an important role in the Himasthla elongata cells:
+
+![overrepresented sequences](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Rplot02.jpeg)
+
+
+
+
+
