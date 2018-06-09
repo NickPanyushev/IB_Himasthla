@@ -32,6 +32,8 @@ To classify transposones we used [RepeatMasker](http://www.repeatmasker.org/) wi
 
 To de novo identify and classify modile elements in reads we used Repeat Explorer from [Galaxy server](http://repeatexplorer.org/)
 
+## Results
+
 In general, using RepeatModeller+Repeatmasker combination we got following results:
 
 ![RepeatModeller+RepeatMasker results](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Counts.png)
