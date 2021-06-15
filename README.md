@@ -1,18 +1,18 @@
 # IB_Himasthla
-This project is about TE search in Himasthla transcriptome
+This project is about search of mobile elements in trematode Himasthla elongata transcriptome
 
 ## Introduction
-Repeated DNA makes up a large fraction of a eukaryotic genome, and some repetitive elements are able to move within the genome (transposons and retrotransposons). DNA transposons move from one genomic location to another by a cut-and-paste mechanism. They are powerful forces of genetic change and have played a significant role in the evolution of many genomes.
-Transposons can cause genome variability in trematodes. Therefore, the study of transcription of transposons - the initial stage in the study of these processes
+Repetitive DNA makes up a large fraction of a eukaryotic genomes, and some repetitive elements, transposons, are able to move within the genome. Transposons are powerful forces of genetic change and have played a significant role in the evolution of many genomes.
+Transposons seem to cause genetic polymorphism in trematodes. Therefore, this project is one of the steps for investigation of transposon functions.
 
 ## Objective:
-Identification TE in Himasthla elongate genome using different tools and comparative analysis of their results
+Identification transposable elements in Himasthla elongata transcriptome using different tools and comparative analysis of their results
 
 ## Goals:
 
-1. Filtering reads using BBTools, Trimmomatic;
+1. Filtering raw reads using BBTools, Trimmomatic;
 
-2. Transcriptome assembly using rnaSPAdes or Trinity;
+2. Transcriptome assembly using rnaSPAdes;
 
 3. Identification and classification of transposable elements using different tools (RepeatModeller, RepeatMasker, Repeatexplorer2)
 
@@ -28,9 +28,9 @@ Identification TE in Himasthla elongate genome using different tools and compara
 
 For de novo transposons identification we used [RepeatModeller tool](http://www.repeatmasker.org/RepeatModeler/) which includes RepeatScout, RECON, and Tandem Repeat Finder.
 
-To classify transposones we used [RepeatMasker](http://www.repeatmasker.org/) with databases from [GIRI](https://www.girinst.org/repbase/)
+To classify transposons we used [RepeatMasker](http://www.repeatmasker.org/) with databases from [GIRI](https://www.girinst.org/repbase/) with multiple types of libraries
 
-To de novo identify and classify modile elements in reads we used Repeat Explorer from [Galaxy server](http://repeatexplorer.org/)
+To identify de novo and classify modile elements in raw reads we used Repeat Explorer from [Galaxy server](http://repeatexplorer.org/)
 
 ## Results
 
@@ -38,12 +38,7 @@ In general, using RepeatModeller+Repeatmasker combination we got following resul
 
 ![RepeatModeller+RepeatMasker results](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Counts.png)
 
-According to RepeatMasker results the most abundance transposone families are BovB, CR1 and Gypsy. All this families belong to retrotransposones.
-
-Some groups contain overrepresented sequences. For example, the PAO family from the LTR class demonstrates one overrepresented sequence that can play an important role in the Himasthla elongata cells:
-
-![overrepresented sequences](https://github.com/NickPanyushev/IB_Himasthla/blob/master/Plots/Rplot02.jpeg)
-
+According to RepeatMasker search, based on RepeatModeller generated library the most abundant transposon families are RTE-BovB, CR1 and Gypsy. All these families belong to class I (retrotransposons).
 
 RepeatExplorer reported about 10 percents of repetitive elements in the H. elongata transcriptome. Only 0,01% fell on Bel-Pao elements, 1.03 - Gypsy and 0.09 - Satellites. 
 
